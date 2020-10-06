@@ -1,0 +1,133 @@
+.cards {
+  @include flexbox(row, center, center);
+  height: 55vh;
+  .card {
+    width: 30%;
+    background-color: #fff;
+    text-align: center;
+    height: 60vh;
+    padding: 1% 2%;
+    .card_head {
+      height: 40%;
+      @include flexbox(column, space-evenly, center);
+      border-bottom: solid 1px $lightGrayishBlue;
+
+      p {
+        color: $grayishBlue;
+      }
+      h1 {
+        font-size: 60px;
+        font-weight: 700;
+        color: $darkGrayishBlue;
+        span{
+          font-size: 30px;
+          position: relative;
+          top: -10px;
+        }
+      }
+    }
+    .card_body {
+      height: 60%;
+      ul {
+        list-style: none;
+        @include flexbox(column, space-evenly, center);
+        height: 70%;
+        li {
+          height: 15%;
+          width: 100%;
+          line-height: 0px;
+          border-bottom: solid 1px $lightGrayishBlue;
+          color: $grayishBlue;
+        }
+      }
+    }
+    button {
+      width: 100%;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 5px;
+      height: 3em;
+      cursor: pointer;
+      outline: none;
+      color: $veryLightGrayishBlue;
+      background-image: linear-gradient(to right, $primaryFrom, $primaryTo);
+      &:hover {
+        border: solid 2px $lightGrayishBlue;
+        background-image: linear-gradient(
+          to right,
+          #fff,
+          $veryLightGrayishBlue
+        );
+        color: $grayishBlue;
+      }
+    }
+  }
+  .first {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .third{
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;  
+}
+  .second {
+    border-radius: 10px;
+    padding: 5vh 2%;
+    height: 65vh;
+    background-image: linear-gradient(to right, $primaryFrom, $primaryTo);
+    color: #fff;
+    .card_head {
+      border-bottom-color: $lightGrayishBlue;
+      p {
+        color: #fff;
+      }
+      h1 {
+        color: #fff;
+      }
+    }
+    
+    .card_body {
+      ul {
+        li {
+          border-bottom-color: $lightGrayishBlue;
+          color: $veryLightGrayishBlue;
+        }
+      }
+      button {
+        background-image: linear-gradient(
+          to right,
+          #fff,
+          $veryLightGrayishBlue
+        );
+        color: $grayishBlue;
+        &:hover {
+            border: solid 2px $veryLightGrayishBlue;
+            background-image: linear-gradient(
+              to right,
+              $primaryFrom,
+              $primaryTo
+            );
+            color: $veryLightGrayishBlue;
+          }
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+    .cards{
+        @include flexbox(column, space-evenly, center);
+        height: 200vh;
+        padding: 1%;
+        // background-color: orange;
+        .card{
+            height: 50%;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        // background-color: orange;
+    }
+}

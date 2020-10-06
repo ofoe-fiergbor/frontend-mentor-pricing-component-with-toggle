@@ -1,0 +1,335 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+  margin-bottom: 8vh;
+}
+
+header h1 {
+  color: #6d708d;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  color: #b3b5c6;
+}
+
+/* Rounded sliders */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  left: 3px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 380px) {
+  header {
+    width: 100%;
+  }
+  header div {
+    width: 80%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 5vh 10vw;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background-color: #f6f6fe;
+}
+
+body section {
+  width: 100%;
+}
+
+body img {
+  position: absolute;
+}
+
+body .bg_top {
+  right: 0;
+  top: 0;
+}
+
+body .bg_bottom {
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 380px) {
+  .bg_top {
+    right: -10;
+    top: 0;
+  }
+  .bg_bottom {
+    display: none;
+  }
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 55vh;
+}
+
+.cards .card {
+  width: 30%;
+  background-color: #fff;
+  text-align: center;
+  height: 60vh;
+  padding: 1% 2%;
+}
+
+.cards .card .card_head {
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 1px #b3b5c6;
+}
+
+.cards .card .card_head p {
+  color: #6d708d;
+}
+
+.cards .card .card_head h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #494c5f;
+}
+
+.cards .card .card_head h1 span {
+  font-size: 30px;
+  position: relative;
+  top: -10px;
+}
+
+.cards .card .card_body {
+  height: 60%;
+}
+
+.cards .card .card_body ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+}
+
+.cards .card .card_body ul li {
+  height: 15%;
+  width: 100%;
+  line-height: 0px;
+  border-bottom: solid 1px #b3b5c6;
+  color: #6d708d;
+}
+
+.cards .card button {
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 3em;
+  cursor: pointer;
+  outline: none;
+  color: #f6f6fe;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+.cards .card button:hover {
+  border: solid 2px #b3b5c6;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#f6f6fe));
+  background-image: linear-gradient(to right, #fff, #f6f6fe);
+  color: #6d708d;
+}
+
+.cards .first {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.cards .third {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cards .second {
+  border-radius: 10px;
+  padding: 5vh 2%;
+  height: 65vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: #fff;
+}
+
+.cards .second .card_head {
+  border-bottom-color: #b3b5c6;
+}
+
+.cards .second .card_head p {
+  color: #fff;
+}
+
+.cards .second .card_head h1 {
+  color: #fff;
+}
+
+.cards .second .card_body ul li {
+  border-bottom-color: #b3b5c6;
+  color: #f6f6fe;
+}
+
+.cards .second .card_body button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#f6f6fe));
+  background-image: linear-gradient(to right, #fff, #f6f6fe);
+  color: #6d708d;
+}
+
+.cards .second .card_body button:hover {
+  border: solid 2px #f6f6fe;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: #f6f6fe;
+}
+
+@media screen and (max-width: 380px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 200vh;
+    padding: 1%;
+  }
+  .cards .card {
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

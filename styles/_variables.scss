@@ -1,0 +1,19 @@
+$primaryFrom: hsl(236, 72%, 79%);
+$primaryTo: hsl(237, 63%, 64%);
+
+$veryLightGrayishBlue: hsl(240, 78%, 98%);
+$lightGrayishBlue: hsl(234, 14%, 74%);
+$grayishBlue: hsl(233, 13%, 49%);
+$darkGrayishBlue: hsl(232, 13%, 33%);
+
+
+$fontSize : 15px;
+$fontFamily: 'Montserrat', sans-serif;
+
+@mixin flexbox($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+}
